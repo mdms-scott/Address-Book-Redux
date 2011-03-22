@@ -1,0 +1,37 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    activesupport (3.0.5)
+    bson (1.2.4)
+    daemons (1.1.0)
+    eventmachine (0.12.10)
+    haml (3.0.25)
+    jnunemaker-validatable (1.8.4)
+      activesupport (>= 2.3.4)
+    mongo (1.2.4)
+      bson (>= 1.2.4)
+    mongo_mapper (0.8.6)
+      activesupport (>= 2.3.4)
+      jnunemaker-validatable (~> 1.8.4)
+      plucky (~> 0.3.6)
+    plucky (0.3.7)
+      mongo (~> 1.1)
+    rack (1.2.2)
+    sinatra (1.2.1)
+      rack (~> 1.1)
+      tilt (>= 1.2.2, < 2.0)
+    thin (1.2.8)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+    tilt (1.2.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  haml
+  mongo
+  mongo_mapper
+  sinatra
+  thin
