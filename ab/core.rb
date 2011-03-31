@@ -2,6 +2,8 @@ class App < Sinatra::Base
   
   set :method_override, true
   
+
+  
   get '/stylesheet.css' do
     sass :stylesheet
   end
