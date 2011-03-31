@@ -1,0 +1,13 @@
+%h1
+  SHOW
+  
+%p
+  %form{:method => "post", :action => "/#{@person.id}"}
+    %input{:name => "_method", :type => "hidden", :value => "delete"}
+    %button Delete
+
+= "First Name:  #{@person.first_name}"
+%br
+= "Last Name:  #{@person.last_name}"
+%br
+%a{:href => '/'}Back to Index
