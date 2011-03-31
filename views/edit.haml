@@ -1,32 +1,33 @@
-%h1
-  EDIT
-  
-%article
-  %form#new{:action => "/#{@person.id}", :method => "post"}
-    %input{:name => "_method", :type => "hidden", :value => "PUT"}
-    %fieldset
-      %legend New Contact
-      %p
-        %label{:for => "first_name"} First Name
-        %br
-        %input#first_name{:name => "person[first_name]", :type => "text", :value => "#{@person.first_name}"}
-      %p
-        %label{:for => "last_name"} Last Name
-        %br
-        %input#last_name{:name => "person[last_name]", :type => "text", :value => "#{@person.last_name}"}
-      %p
-        %label{:for => "company"} Company
-        %br
-        %input#company{:name => "person[company]", :type => "text", :value => "#{@person.company}"}
-      %p
-        %label{:for => "phone"} Phone Number
-        %br
-        %input#phone{:name => "person[phone]", :type => "text", :value => "#{@person.phone}"}
-      %p
-        %label{:for => "email"} Email Address
-        %br
-        %input#email{:name => "person[email]", :type => "email", :value => "#{@person.email}"}
-    %section
-      %button Update
-      or
-      %a{:href => '/'} Cancel
+.center
+  %h3 Edit Contact Information
+
+#container
+  %article
+    %form#new{:action => "/#{@person.id}", :method => "post"}
+      %input{:name => "_method", :type => "hidden", :value => "PUT"}
+      %fieldset
+        %legend New Contact
+        %p
+          %label{:for => "first_name"} First Name
+          %br
+          %input#first_name{:name => "person[first_name]", :type => "text", :value => "#{@person.first_name}"}
+        %p
+          %label{:for => "last_name"} Last Name
+          %br
+          %input#last_name{:name => "person[last_name]", :type => "text", :value => "#{@person.last_name}"}
+        %p
+          %label{:for => "company"} Company
+          %br
+          %input#company{:name => "person[company]", :type => "text", :value => "#{@person.company}"}
+        %p
+          %label{:for => "phone"} Phone Number
+          %br
+          %input#phone{:name => "person[phone]", :type => "text", :value => "#{@person.phone}"}
+        %p
+          %label{:for => "email"} Email Address
+          %br
+          %input#email{:name => "person[email]", :type => "email", :value => "#{@person.email}"}
+      %section.right
+        %button Update
+        or
+        %a{:href => '/'} Cancel

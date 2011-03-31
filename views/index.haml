@@ -1,7 +1,7 @@
-%h1
-  INDEX
+.center
+  %h2 Address Book
 #container
-  %table{:width => "100%"}
+  %table.center
     %tr
       %th First Name
       %th Last Name
@@ -11,31 +11,26 @@
       %th Actions
 
     - @people.each do |person|
-      / %p
-      /         %a{:href => "/#{person.id}"}
-      /           = "#{person.first_name} #{person.last_name}"
-      /         %br
-      /         %a{:href => "/#{person.id}/edit"}Edit this person
-      /         %br
-      /         %form{:method => "post", :action => "/#{person.id}"}
-      /           %input{:type => "hidden", :name => "_method", :value => "delete"}
-      /           %input{:type => "submit", :value => "Delete"}
-      %td
-        = person.first_name
-      %td
-        = person.last_name
-      %td
-        = person.company
-      %td
-        = person.phone
-      %td
-        = person.email
-      %td
-        %a{:href => "/#{person.id}/edit"}Edit this person
-        or
-        %form{:method => "post", :action => "/#{person.id}"}
-          %input{:type => "hidden", :name => "_method", :value => "delete"}
-          %input{:type => "submit", :value => "Delete"}
+      %tr
+        %td
+          = person.first_name
+        %td
+          = person.last_name
+        %td
+          = person.company
+        %td
+          = person.phone
+        %td
+          = person.email
+        %td
+          %ul
+            %li
+              %a{:href => "/#{person.id}/edit"}Edit this person
+            %li
+              %form{:method => "post", :action => "/#{person.id}"}
+                %input{:type => "hidden", :name => "_method", :value => "delete"}
+                %input{:type => "submit", :value => "Delete"}
 
-%p  
-  %a{:href => '/new'}New Contact
+  %p
+    %h3.right
+      %a{:href => '/new'}New Contact
