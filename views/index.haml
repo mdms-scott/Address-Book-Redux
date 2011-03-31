@@ -25,7 +25,7 @@
         %td
           %ul
             %li
-              %a{:href => "/#{person.id}/edit"}Edit this person
+              %a{:href => "/#{person.id}/edit"}Edit
             %li
               %form{:method => "post", :action => "/#{person.id}"}
                 %input{:type => "hidden", :name => "_method", :value => "delete"}
